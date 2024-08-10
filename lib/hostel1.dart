@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Hostel1 extends StatelessWidget {
+class Hostel1 extends StatefulWidget {
   const Hostel1({super.key});
 
+  @override
+  State<Hostel1> createState() => _Hostel1State();
+}
+
+class _Hostel1State extends State<Hostel1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -214,7 +219,7 @@ class Hostel1 extends StatelessWidget {
             ], ),
 
           ],
-        
+
         ),
       ),
     );

@@ -52,9 +52,9 @@ class Profile extends StatelessWidget {
                         child: TextButton(onPressed: (){},
                             child:const Row(
                               children: [
-                                Icon(Icons.dark_mode,),
+                                Icon(Icons.lock,),
                                 SizedBox(width: 10,),
-                                Text("Night Mode",style: TextStyle(fontSize:20),)
+                                Text("Change Password",style: TextStyle(fontSize:20),)
                               ],
                             )),
                       ),
@@ -73,9 +73,9 @@ class Profile extends StatelessWidget {
                         child: TextButton(onPressed: (){},
                         child:const Row(
                           children: [
-                            Icon(Icons.logout_sharp,),
+                            Icon(Icons.dark_mode,),
                             SizedBox(width: 10,),
-                            Text("Change Password",style: TextStyle(fontSize:20),)
+                            Text("Night Mode",style: TextStyle(fontSize:20),)
                           ],
                         )),
                       ),
@@ -94,9 +94,9 @@ class Profile extends StatelessWidget {
                         child: TextButton(onPressed: (){},
                             child:const Row(
                               children: [
-                                Icon(Icons.lock,),
+                                Icon(Icons.logout_outlined),
                                 SizedBox(width: 10,),
-                                Text("Change Password",style: TextStyle(fontSize:20),)
+                                Text("Log Out",style: TextStyle(fontSize:20),)
                               ],
                             )),
                       ),

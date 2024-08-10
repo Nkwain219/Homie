@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:homie/onboardscreen2.dart';
 
-class OnBoardScreen1 extends StatelessWidget {
+class OnBoardScreen1 extends StatelessWidget  {
   const OnBoardScreen1({super.key});
 
   @override

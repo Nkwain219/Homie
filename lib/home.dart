@@ -1,7 +1,9 @@
 
 import 'package:flutter/material.dart';
-import 'package:homie/hostel1.dart';
+import 'package:homie/hostel2.dart';
 import 'package:homie/login.dart';
+import 'package:homie/notification.dart';
+import 'package:homie/profile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -53,7 +55,10 @@ class _HomePageState extends State<HomePage> {
                   child: Icon(Icons.home,color: Colors.blue,),
                 ),
                 title: const Text("Home",style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold),),
-                onTap: (){},
+                onTap: (){
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) => const HomePage()));
+                },
               ),
               const SizedBox(height: 20,),
               ListTile(
@@ -62,7 +67,10 @@ class _HomePageState extends State<HomePage> {
                   child: Icon(Icons.notifications,color: Colors.blue,),
                 ),
                 title: const Text("Notifications",style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold)),
-                onTap: (){},
+                onTap: (){
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) => const NotificationPage()));
+                },
               ),
               const SizedBox(height: 20,),
               ListTile(
@@ -71,7 +79,10 @@ class _HomePageState extends State<HomePage> {
                   child: Icon(Icons.person,color: Colors.blue,),
                 ),
                 title: const Text("Account",style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold)),
-                onTap: (){},
+                onTap: (){
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) => const Profile()));
+                },
               ),const SizedBox(height: 20,),
               ListTile(
                 leading:const CircleAvatar(
@@ -79,7 +90,10 @@ class _HomePageState extends State<HomePage> {
                   child: Icon(Icons.logout,color: Colors.blue,),
                 ),
                 title: const Text("Logout",style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold)),
-                onTap: (){},
+                onTap: (){
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) => const WelcomePage()));
+                },
               ),
             ],
           ),
@@ -105,7 +119,10 @@ class _HomePageState extends State<HomePage> {
                 const Align(
                   alignment: Alignment.centerLeft,
                     child:
-                    Text(" Make a choice...",style: TextStyle(color: Colors.grey,fontSize: 15,fontWeight: FontWeight.bold,),)),
+                    Padding(
+                      padding: EdgeInsets.only(left: 8.0),
+                      child: Text(" Make a choice...",style: TextStyle(color: Colors.grey,fontSize: 15,fontWeight: FontWeight.bold,),),
+                    )),
                 Padding(
                   padding: const EdgeInsets.all(14.0),
                   child: Container(
@@ -117,12 +134,15 @@ class _HomePageState extends State<HomePage> {
 
                     ),
                     child:
-                    const TextField(
-                      decoration: InputDecoration(
-                        hintText: "Enter your keyword",
-                        border: InputBorder.none,
-                        icon: Icon(Icons.search),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8.0),
+                      child: const TextField(
+                        decoration: InputDecoration(
+                          hintText: "Enter your keyword",
+                          border: InputBorder.none,
+                          icon: Icon(Icons.search),
 
+                        ),
                       ),
                     ),
                     ),
@@ -147,7 +167,7 @@ class _HomePageState extends State<HomePage> {
                             onTap: (){
                               Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (BuildContext context) => const Hostel1()));
+                                  MaterialPageRoute(builder: (BuildContext context) => const Hostel2()));
                             },
                             child: Column(
                               children: [
